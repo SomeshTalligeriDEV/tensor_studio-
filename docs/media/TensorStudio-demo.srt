@@ -1,0 +1,179 @@
+1
+00:00:00,150 --> 00:00:03,222
+What useful work should a Bittensor subnet reward?
+
+2
+00:00:03,372 --> 00:00:06,042
+That question is where a project begins.
+
+3
+00:00:06,192 --> 00:00:13,291
+Turning the answer into software usually means moving between an editor, a terminal, evaluation scripts and chain tools.
+
+4
+00:00:13,441 --> 00:00:22,555
+TensorStudio brings those pieces into a browser workspace, giving builders a practical path from an idea to code they can inspect and improve.
+
+5
+00:00:25,150 --> 00:00:29,576
+Start in TensorScan, choose testnet, and watch the observed blocks advance.
+
+6
+00:00:29,726 --> 00:00:37,065
+Each block arrives from the real Bittensor network, with finality and decoded activity visible in the same view.
+
+7
+00:00:37,215 --> 00:00:41,641
+This gives our work a concrete reference point: current chain activity.
+
+8
+00:00:41,791 --> 00:00:50,793
+Public chain reads are available independently of a miner process, so we can explore Bittensor before setting up our own subnet infrastructure.
+
+9
+00:00:55,150 --> 00:00:57,839
+Now bring an idea into the workspace.
+
+10
+00:00:57,989 --> 00:01:03,924
+Ask for a simple task tracker, review a suggested direction, and continue into the editor.
+
+11
+00:01:04,074 --> 00:01:07,980
+The conversation, editable project files and app preview sit together.
+
+12
+00:01:08,130 --> 00:01:12,847
+Open a file to understand the implementation, then try the resulting interface.
+
+13
+00:01:12,997 --> 00:01:19,743
+The useful loop is straightforward: describe the behavior, inspect the code, run it, and make a change.
+
+14
+00:01:19,893 --> 00:01:29,883
+For a subnet team, this is a place to develop the application around its idea while keeping the implementation visible to the people reviewing it.
+
+15
+00:01:35,150 --> 00:01:37,967
+SubCreate focuses that workflow on subnet design.
+
+16
+00:01:38,117 --> 00:01:43,053
+Describe the task and provide the dataset, then generate a structured recipe.
+
+17
+00:01:43,203 --> 00:01:53,225
+The recipe brings the important decisions into view: the work a miner performs, the ground truth, the scoring components and the checks against shortcuts.
+
+18
+00:01:53,375 --> 00:01:59,582
+Inspect the JSON, then use project assembly and code checks to move toward an implementation.
+
+19
+00:01:59,732 --> 00:02:07,211
+This makes the evaluation problem something the team can discuss alongside the code, before relying on its incentives.
+
+20
+00:02:10,150 --> 00:02:15,433
+Nodes connects the project to native miner and validator processes on the hosted runner.
+
+21
+00:02:15,583 --> 00:02:20,479
+Use the process view to inspect status, read logs and manage its lifecycle.
+
+22
+00:02:20,629 --> 00:02:28,629
+Runner also provides authenticated command execution with streamed output, making a simple Python command an immediate way to check the connection.
+
+23
+00:02:28,779 --> 00:02:32,898
+These tools bring execution into the same workflow as the editor.
+
+24
+00:02:33,048 --> 00:02:40,272
+A process has a concrete state and output that we can inspect while working through the next development step.
+
+25
+00:02:45,150 --> 00:02:49,328
+The harness makes the scoring design something we can examine.
+
+26
+00:02:49,478 --> 00:02:55,388
+This saved report compares honest, incorrect, slow and empty answers using controlled offline fixtures.
+
+27
+00:02:55,538 --> 00:03:01,448
+Here, identical classification labels receive equal scores, because matching labels do not prove cheating.
+
+28
+00:03:01,598 --> 00:03:04,478
+Incorrect and timed out responses score zero.
+
+29
+00:03:04,628 --> 00:03:14,000
+These are real scoring calculations with simulated timing, giving the team a specific result to investigate before evaluating miners on a network.
+
+30
+00:03:15,150 --> 00:03:19,034
+Return to TensorScan to explore observed blocks, calls and events.
+
+31
+00:03:19,184 --> 00:03:25,490
+Switch the activity view, then open an underlying block to understand where the chart comes from.
+
+32
+00:03:25,640 --> 00:03:30,331
+In the dashboard, choose a subnet and inspect its available neuron information.
+
+33
+00:03:30,481 --> 00:03:34,365
+Account views add another way to follow a public address.
+
+34
+00:03:34,515 --> 00:03:42,434
+Together, these views connect building with observation: we can ask what the chain actually shows and inspect the supporting details.
+
+35
+00:03:42,584 --> 00:03:49,293
+The recent browser index is bounded, and missing observations remain visible as gaps in the available data.
+
+36
+00:03:55,150 --> 00:03:58,925
+Wallet adds encrypted browser-local wallet control to the workspace.
+
+37
+00:03:59,075 --> 00:04:04,159
+Here we inspect the interface without displaying recovery material or sending funds.
+
+38
+00:04:04,309 --> 00:04:13,755
+Playground explains development funding paths for the selected network, while the Quest learning link offers a next step for understanding the ecosystem.
+
+39
+00:04:13,905 --> 00:04:22,042
+These supporting tools help a builder move between learning, configuration and development without losing the context of the project.
+
+40
+00:04:25,150 --> 00:04:30,231
+TensorStudio brings ideas, editable code, execution, offline evaluation and chain observation together.
+
+41
+00:04:30,381 --> 00:04:37,641
+That is its practical value to Bittensor builders: a clearer loop for testing decisions and reviewing evidence.
+
+42
+00:04:37,791 --> 00:04:42,000
+This free demonstration can sleep, and runner files are ephemeral.
+
+43
+00:04:42,150 --> 00:04:44,615
+No development chain is deployed here.
+
+44
+00:04:44,765 --> 00:04:53,769
+Running a process is separate from chain registration, endpoint serving, weight reveals and rewards; offline scores do not prove those milestones.
+
+45
+00:04:53,919 --> 00:04:59,000
+Explore the deployed workspace, inspect the results, and keep improving the idea.

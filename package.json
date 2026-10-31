@@ -1,0 +1,27 @@
+{
+  "name": "tensorstudio",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --filter @tensorstudio/web dev",
+    "dev:runner": "sh scripts/dev-runner.sh",
+    "build": "pnpm --filter @tensorstudio/web build",
+    "dev:all": "node scripts/dev-all.mjs",
+    "test": "pnpm --filter @tensorstudio/web test",
+    "typecheck": "pnpm --filter @tensorstudio/web typecheck",
+    "test:runner": "cd apps/runner && uv run python -m pytest tests -q",
+    "build:scan": "TENSORSCAN_ONLY=1 pnpm --filter @tensorstudio/web build",
+    "start:scan": "cd apps/web && node server/scan.mjs",
+    "package:scan:vercel": "node scripts/package-scan-vercel.mjs",
+    "package:studio:vercel": "node scripts/package-studio-vercel.mjs",
+    "test:studio-access": "node --test scripts/studio-access.test.mjs"
+  },
+  "pnpm": {
+    "overrides": {
+      "@typescript-eslint/utils": "^8.0.0-alpha.30"
+    }
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "packageManager": "pnpm@10.15.0"
+}

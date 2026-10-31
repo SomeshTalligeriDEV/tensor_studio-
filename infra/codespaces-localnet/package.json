@@ -1,0 +1,8 @@
+{
+  "name":"tensorscan-localnet-session",
+  "private":true,
+  "type":"module",
+  "engines":{"node":">=22"},
+  "scripts":{"test":"node --test policy.test.mjs","proxy":"node proxy.mjs"},
+  "dependencies":{"ws":"8.18.3"}
+}

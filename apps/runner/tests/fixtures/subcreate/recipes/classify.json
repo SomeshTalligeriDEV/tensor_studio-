@@ -1,0 +1,42 @@
+{
+  "problem": "Flag suspicious product reviews for human review.",
+  "task": {
+    "block": "classify",
+    "params": {}
+  },
+  "ground_truth": {
+    "block": "dataset",
+    "params": {
+      "file": "custom.jsonl"
+    }
+  },
+  "scoring": [
+    {
+      "block": "exact_or_fuzzy",
+      "weight": 0.8
+    },
+    {
+      "block": "latency_bonus",
+      "weight": 0.2
+    }
+  ],
+  "anti_cheat": [
+    "timeout_zero"
+  ],
+  "weights": {
+    "block": "ema_normalize",
+    "params": {
+      "alpha": 0.2
+    }
+  },
+  "brief": {
+    "problem": "Flag suspicious product reviews for human review.",
+    "who_benefits": "Product review moderators",
+    "what_miners_do": "Label a review as real or fake using illustrative demo labels.",
+    "how_validators_check": "Compare responses to a fixed labelled dataset; reward correctness and timely responses.",
+    "how_rewards_flow": "Normalize scores into relative weights using an exponential moving average.",
+    "how_cheaters_lose": "Timeouts score zero; duplicate answers split credit. Duplicate text alone does not prove cheating.",
+    "why_this_design": "Deterministic dataset scoring provides a reproducible local demo without model API calls.",
+    "alternative_considered": "An LLM judge adds flexible evaluation but requires an online model and separate validation."
+  }
+}

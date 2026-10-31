@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+.uv/
+
+# Environment
+.env
+.env.local
+
+# Build
+dist/
+build/
+.cache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+
+# Runner data
+apps/runner/data/
+apps/runner/*.db
+
+# Keys (never commit)
+*.pem
+*.key
+dev-keys/
+
+.localnet/
+.deploy/
+.vercel/
+
+# Generated captures and deployment-private files
+artifacts/
+.pytest_cache/
+.wrangler/
+.env.*
+!.env.example
+*.vars

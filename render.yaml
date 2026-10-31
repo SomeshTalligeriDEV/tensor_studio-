@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: tensorscan
+    runtime: node
+    plan: free
+    buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm build:scan
+    startCommand: cd apps/web && node server/scan.mjs
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_VERSION
+        value: 22.16.0
+      - key: NODE_ENV
+        value: production
+      - key: PUBLIC_ORIGIN
+        sync: false
+      - key: CHAIN_WS
+        sync: false

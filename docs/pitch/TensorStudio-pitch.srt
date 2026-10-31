@@ -1,0 +1,123 @@
+1
+00:00:00,100 --> 00:00:06,274
+A useful Bittensor subnet starts with a simple question: what work should this network reward?
+
+2
+00:00:06,374 --> 00:00:11,712
+The difficult part is turning that answer into a system people can inspect.
+
+3
+00:00:11,812 --> 00:00:17,150
+Today, a builder moves between documentation, editors, terminals, evaluation scripts and chain explorers.
+
+4
+00:00:17,250 --> 00:00:28,444
+TensorStudio connects that journey in one browser workspace, so a team can spend more attention on the quality of its idea and less on connecting its tools.
+
+5
+00:00:30,100 --> 00:00:31,756
+Start with a conversation.
+
+6
+00:00:31,856 --> 00:00:36,145
+Describe the problem, explore tradeoffs, and get practical next steps.
+
+7
+00:00:36,245 --> 00:00:43,168
+Carry the idea into the Subnet builder, where editable files sit beside a working application preview.
+
+8
+00:00:43,268 --> 00:00:48,874
+Here, we add tasks to a real generated interface and inspect its code.
+
+9
+00:00:48,974 --> 00:00:57,214
+That same loop helps a subnet team develop the tools around its service: describe, build, try, understand, and improve.
+
+10
+00:01:00,100 --> 00:01:02,515
+Then make the subnet's task explicit.
+
+11
+00:01:02,615 --> 00:01:05,868
+Supply labelled examples for question answering or classification.
+
+12
+00:01:05,968 --> 00:01:14,250
+Subnet setup produces a structured recipe for the task, ground truth, scoring and proposed weights, then assembles reviewed project templates.
+
+13
+00:01:14,350 --> 00:01:18,860
+The offline harness compares controlled answers and exposes the scoring behavior.
+
+14
+00:01:18,960 --> 00:01:22,632
+Its timing is simulated, but its calculations are real.
+
+15
+00:01:22,732 --> 00:01:28,500
+This helps teams challenge an evaluation design before trusting the incentives built around it.
+
+16
+00:01:30,100 --> 00:01:32,552
+The architecture keeps each responsibility clear.
+
+17
+00:01:32,652 --> 00:01:36,806
+The browser contains the workspace, preview and encrypted wallet tools.
+
+18
+00:01:36,906 --> 00:01:41,060
+The web application handles validated assistant requests and owner access.
+
+19
+00:01:41,160 --> 00:01:47,015
+An authenticated Python runner assembles projects, evaluates fixtures, runs native processes and streams logs.
+
+20
+00:01:47,115 --> 00:01:49,567
+A configurable model endpoint supplies inference.
+
+21
+00:01:49,667 --> 00:01:52,545
+Separately, direct Subtensor reads supply network observations.
+
+22
+00:01:52,645 --> 00:01:58,500
+Short lived runner sessions connect these components without placing server credentials in the browser.
+
+23
+00:02:00,100 --> 00:02:10,085
+Bittensor gives this workflow its purpose: specialized tasks, miners that perform the work, validators that assess contributions, and a chain that coordinates participation.
+
+24
+00:02:10,185 --> 00:02:13,592
+TensorStudio maps those roles into inspectable development tools.
+
+25
+00:02:13,692 --> 00:02:20,169
+Generated processes use signed HTTP requests, while TensorScan shows live blocks, events and subnet data.
+
+26
+00:02:20,269 --> 00:02:28,500
+A running process is distinct from a registered subnet; chain participation, accepted weights and rewards need their own validation.
+
+27
+00:02:30,100 --> 00:02:35,783
+Our opportunity is developer productivity: team workspaces, managed runners, private evaluations and operational visibility.
+
+28
+00:02:35,883 --> 00:02:41,565
+These are proposed paid products, with pricing grounded in actual compute and support costs.
+
+29
+00:02:41,665 --> 00:02:47,348
+The current demonstration uses an ephemeral free runner; production teams need durable, isolated infrastructure.
+
+30
+00:02:47,448 --> 00:02:52,717
+TensorStudio's vision is simple: make useful intelligence easier to build, evaluate and understand.
+
+31
+00:02:52,817 --> 00:02:58,500
+Explore the workspace, inspect the demo, and bring your next Bittensor idea to life.

@@ -1,0 +1,9 @@
+import type { LiveState } from '~/lib/chain/session-runtime';
+import { TESTNET_GENESIS } from '@tensorstudio/chain';
+import { ScanLink } from './ScanLink';
+export function ChainProof({state}:{state:LiveState}){
+ const connected=state.status==='Connected';
+ const verified=connected && ((state.network==='test' && state.genesis===TESTNET_GENESIS)||(state.network==='local' && !!state.genesis));
+ const networkName=state.network==='local'?'your Subtensor localnet':state.network==='test'?'Bittensor testnet':'Bittensor mainnet';
+ return <details className="scan-proof"><summary><span className={`scan-proof-dot ${verified?'is-verified':''}`} />{connected?`Connected to ${networkName}`:state.genesis?`Cached ${networkName} observations`:`${state.status} · ${networkName}`}<span>Where does this data come from?</span></summary><div className="scan-proof-body"><p>Blocks and transactions come directly from this network’s WebSocket RPC. We subscribe to new and finalized heads, then decode each block’s extrinsics and events. No sample transactions are inserted.</p><dl><dt>RPC endpoint</dt><dd><code>{state.endpoint || 'Connecting…'}</code></dd><dt>Genesis hash</dt><dd><code>{state.genesis || 'Waiting for identity…'}</code></dd><dt>Latest decoded block</dt><dd>{state.blocks[0]?<ScanLink kind="block" value={String(state.blocks[0].number)}>#{state.blocks[0].number.toLocaleString('en-US')} · {state.blocks[0].hash}</ScanLink>:'Waiting for block data…'}</dd></dl><p>{connected && state.network==='test' && verified?'The genesis hash matches our pinned Bittensor testnet identity. ':state.network==='local' && state.genesis?'This session checked the Subtensor runtime and Development/Local chain type before accepting this identity. ':''}This explorer trusts the connected RPC node; it is not a light client. Testnet tokens have no monetary value. The TAO/USD market chart shows mainnet market data separately.</p></div></details>;
+}

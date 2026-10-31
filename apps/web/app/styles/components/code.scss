@@ -1,0 +1,9 @@
+.actions .shiki {
+  background-color: var(--bitcode-elements-actions-code-background) !important;
+}
+
+.shiki {
+  &:not(:has(.actions), .actions *) {
+    background-color: var(--bitcode-elements-messages-code-background) !important;
+  }
+}

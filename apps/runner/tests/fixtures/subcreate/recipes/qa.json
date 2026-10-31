@@ -1,0 +1,43 @@
+{
+  "problem": "Provide reliable answers about Bittensor fundamentals.",
+  "task": {
+    "block": "qa",
+    "params": {}
+  },
+  "ground_truth": {
+    "block": "dataset",
+    "params": {
+      "file": "custom.jsonl"
+    }
+  },
+  "scoring": [
+    {
+      "block": "exact_or_fuzzy",
+      "weight": 0.8
+    },
+    {
+      "block": "latency_bonus",
+      "weight": 0.2
+    }
+  ],
+  "anti_cheat": [
+    "copy_penalty",
+    "timeout_zero"
+  ],
+  "weights": {
+    "block": "ema_normalize",
+    "params": {
+      "alpha": 0.2
+    }
+  },
+  "brief": {
+    "problem": "Provide reliable answers about Bittensor fundamentals.",
+    "who_benefits": "Bittensor newcomers",
+    "what_miners_do": "Answer a Bittensor question.",
+    "how_validators_check": "Compare responses to a fixed labelled dataset; reward correctness and timely responses.",
+    "how_rewards_flow": "Normalize scores into relative weights using an exponential moving average.",
+    "how_cheaters_lose": "Timeouts score zero; duplicate answers split credit. Duplicate text alone does not prove cheating.",
+    "why_this_design": "Deterministic dataset scoring provides a reproducible local demo without model API calls.",
+    "alternative_considered": "An LLM judge adds flexible evaluation but requires an online model and separate validation."
+  }
+}
