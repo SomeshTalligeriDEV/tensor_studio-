@@ -11,7 +11,7 @@ A guided browser workspace for people exploring and building on Bittensor.
 ![Python](https://img.shields.io/badge/Python_3.11-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![React](https://img.shields.io/badge/React-102329?style=for-the-badge&logo=react)
 
-[Open TensorStudio](https://tensorstudio-workbench.vercel.app) · [Watch the five-minute journey](docs/media/TensorStudio-developer-journey-5min.mp4) · [Three-minute pitch](docs/pitch/README.md) · [Project brief PDF](docs/resources/TensorStudio-Project-Brief.pdf)
+[Open TensorStudio](https://tensorstudio-workbench.vercel.app) · [Public pitch deck](https://tensorstudio-pitch-deck.vercel.app) · [Open TensorScan](https://tensorscan.vercel.app/scan?network=test) · [Watch the five-minute journey](docs/media/TensorStudio-developer-journey-5min.mp4) · [Three-minute pitch](docs/pitch/README.md) · [Project brief PDF](docs/resources/TensorStudio-Project-Brief.pdf)
 
 </div>
 
@@ -81,6 +81,21 @@ In **Subnet setup**, describe a question-answering or classification task and su
 Manage generated miner and development-validator processes through Nodes. Inspect logs, stop or restart a process, and run authenticated commands in the console. Open **TensorScan** and the subnet dashboard to inspect real chain observations, public addresses and neuron information.
 
 ![Observed testnet subnet dashboard](docs/media/dashboard.png)
+
+### TensorScan → See what the network recorded
+
+**Process logs explain your software. TensorScan explains the chain observations.** Open the explorer inside Studio or use the [standalone TensorScan application](https://tensorscan.vercel.app/scan?network=test).
+
+- **Follow the network:** observe heads, finality, blocks and decoded calls as the RPC provides them.
+- **Investigate activity:** inspect events, addresses and transaction details, with the selected network kept visible.
+- **Understand subnets:** explore participant identities, validator permits and available subnet metrics.
+- **Inspect the source:** review the RPC connection and distinguish recent browser-indexed data from historical state.
+
+![TensorScan explorer — recorded public testnet interface](docs/media/tensorscan.png)
+
+Start with **Testnet**, open a block or subnet, then compare those observations with your development logs. Running a local miner does not establish on-chain registration, accepted weights or rewards. Historical coverage depends on RPC retention; loading states remain explicit until real data arrives.
+
+[Open TensorScan ↗](https://tensorscan.vercel.app/scan?network=test) · [Read the full project description](docs/pitch/PROJECT-DESCRIPTION.md) · [View the six-slide pitch deck](https://tensorstudio-pitch-deck.vercel.app)
 
 ## Why Bittensor
 
