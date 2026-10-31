@@ -15,6 +15,12 @@ A guided browser workspace for people exploring and building on Bittensor.
 
 </div>
 
+> **A small credit budget. A bigger idea.**
+>
+> I built TensorStudio while running short on Codex and Claude credits. The heart of this project is the problem it tackles: helping people move from learning Bittensor to building, testing and understanding a useful AI service. Look beyond the visual polish and explore the idea, the workflow and the problems it can help solve.
+>
+> **Give it five minutes—or watch at 1.5× or 2× for a quick tour.** [Watch the demo](docs/media/TensorStudio-developer-journey-5min.mp4), then [try TensorStudio](https://tensorstudio-workbench.vercel.app). Click around, test the workflow and tell me what you would build next. There is a lot here to explore.
+
 [![Watch the TensorStudio developer journey](docs/media/developer-journey-poster.png)](docs/media/TensorStudio-developer-journey-5min.mp4)
 
 ## From a useful idea to an inspectable system
