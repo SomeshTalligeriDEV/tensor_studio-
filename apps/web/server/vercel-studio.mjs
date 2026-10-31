@@ -4,9 +4,12 @@ import { Readable, Transform } from 'node:stream';
 import { pipeline } from 'node:stream/promises';
 import { randomUUID } from 'node:crypto';
 import * as build from '../build/server/index.js';
-import { studioAccess } from './studio-access.mjs';
+import { createOwnerCookie } from './owner-access.mjs';
+import { studioAccess, PUBLIC_AI_ACTIONS } from './studio-access.mjs';
 
 const handle = createRequestHandler(build, 'production');
+const aiRequests = new Map();
+let aiMinute = 0, aiCount = 0;
 const LIMIT = 4 * 1024 * 1024;
 const CONFIG = ['CHAIN_WS', 'AI_API_KEY', 'AI_BASE_URL', 'AI_MODEL', 'CHUTES_API_KEY', 'CHUTES_MODELS', 'AI_FALLBACK_API_KEY', 'AI_FALLBACK_BASE_URL', 'AI_FALLBACK_MODEL', 'RUNNER_PUBLIC_URL', 'RUNNER_SESSION_SECRET', 'PUBLIC_ORIGIN'];
 
@@ -23,10 +26,34 @@ export default async function handler(req, res) {
     // Reject absolute request targets: the deployment origin is server configuration.
     if (!req.url?.startsWith('/') || req.url.startsWith('//')) throw new Error('Invalid request target');
     const url = new URL(req.url, origin);
-    const access = studioAccess(req.method, url.pathname, req.headers.authorization, process.env.STUDIO_ACCESS_PASSWORD);
+    const password = process.env.STUDIO_ACCESS_PASSWORD;
+    const owner = studioAccess('GET', '/api/runner-connection', req.headers.authorization, password, req.headers.cookie) === 200;
+    if (url.pathname === '/api/access' && req.method === 'GET') {
+      res.writeHead(200, { 'Content-Type': 'application/json', 'Cache-Control': 'private, no-store' });
+      res.end(JSON.stringify({ owner })); return;
+    }
+    if (url.pathname === '/api/owner-access' && req.method === 'POST') {
+      if (req.headers.origin !== origin || !req.headers['content-type']?.includes('application/json')) {
+        res.writeHead(403); res.end('Origin not allowed.'); return;
+      }
+      let body = ''; for await (const chunk of req) { body += chunk; if (Buffer.byteLength(body) > 2048) { res.writeHead(413); res.end('Request too large.'); return; } }
+      let supplied; try { supplied = JSON.parse(body).password; } catch { supplied = ''; }
+      const valid = typeof supplied === 'string' && studioAccess('GET', '/api/runner-connection', 'Basic ' + Buffer.from('studio:' + supplied).toString('base64'), password) === 200;
+      res.writeHead(valid ? 200 : 403, { 'Content-Type': 'application/json', 'Cache-Control': 'no-store', ...(valid ? { 'Set-Cookie': createOwnerCookie(password) } : {}) });
+      res.end(JSON.stringify(valid ? { ok: true } : { error: 'Owner access could not be verified.' })); return;
+    }
+    const access = studioAccess(req.method, url.pathname, req.headers.authorization, password, req.headers.cookie);
+    if (access === 200 && !owner && req.method === 'POST' && PUBLIC_AI_ACTIONS.has(url.pathname)) {
+      const minute = Math.floor(Date.now() / 60000);
+      if (minute !== aiMinute) { aiMinute = minute; aiCount = 0; aiRequests.clear(); }
+      const client = String(req.headers['x-vercel-forwarded-for'] || req.socket?.remoteAddress || 'unknown');
+      const used = aiRequests.get(client) || 0;
+      if (used >= 6 || aiCount >= 40) { res.writeHead(429, { 'Retry-After': '60', 'Cache-Control': 'no-store' }); res.end('The public demo request limit was reached. Please try again in a minute.'); return; }
+      aiRequests.set(client, used + 1); aiCount++;
+    }
     if (access !== 200) {
-      res.writeHead(access, { 'Cache-Control': 'no-store', ...(access === 401 ? { 'WWW-Authenticate': 'Basic realm="TensorStudio", charset="UTF-8"' } : {}) });
-      res.end(access === 503 ? 'Workspace access is not configured.' : 'Workspace authentication required.');
+      res.writeHead(access === 401 ? 403 : access, { 'Cache-Control': 'no-store' });
+      res.end(access === 503 ? 'Workspace access is not configured.' : 'Owner execution access is required. Open /owner to connect the private runner.');
       return;
     }
     if (url.pathname === '/healthz') {

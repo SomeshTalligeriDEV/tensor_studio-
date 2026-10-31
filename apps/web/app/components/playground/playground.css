@@ -1,8 +1,8 @@
-.guided-playground { --lab-accent: #b3a0f5; max-width: 1180px; margin: 0 auto; padding: 48px 48px 64px; }
-.playground-intro { max-width: 720px; margin: 0 auto 32px; text-align: center; }
-.playground-symbol { display: inline-flex; align-items: center; justify-content: center; width: 52px; height: 52px; background: #a28ad91a; border: 1px solid #b3a0f540; border-radius: 17px; color: var(--lab-accent); font-size: 25px; transform: rotate(-7deg); }
-.playground-kicker { margin: 18px 0 10px; color: var(--mono-949494); font-size: 13px; }
-.playground-intro h1 { font-size: clamp(30px, 4vw, 48px); letter-spacing: -.045em; line-height: 1.14; font-weight: 550; color: var(--mono-f5f5f5); margin: 0 0 18px; }
+.guided-playground { --lab-accent: #b3a0f5; max-width: 1180px; margin: 0 auto; padding: 32px 40px 48px; }
+.playground-intro { max-width: 720px; margin: 0 auto 24px; text-align: center; }
+.playground-symbol { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; background: #a28ad91a; border: 1px solid #b3a0f540; border-radius: 17px; color: var(--lab-accent); font-size: 25px; transform: rotate(-7deg); }
+.playground-kicker { margin: 12px 0 8px; color: var(--mono-949494); font-size: 13px; }
+.playground-intro h1 { font-size: clamp(28px, 3vw, 40px); letter-spacing: -.045em; line-height: 1.14; font-weight: 550; color: var(--mono-f5f5f5); margin: 0 0 12px; }
 .playground-intro > p:last-child { color: var(--mono-949494); font-size: 15px; line-height: 1.7; }
 .playground-network { max-width: 920px; margin: 32px auto 0; border: 1px solid var(--mono-282828); border-radius: 14px; overflow: hidden; }
 .playground-network > summary { cursor: pointer; display: flex; align-items: center; gap: 14px; padding: 20px 24px; list-style: none; }
@@ -13,3 +13,31 @@
 .playground-network-state { margin-left: auto; font-size: 11px; color: var(--mono-949494); }
 .playground-network .scan { border-top: 1px solid var(--mono-282828); }
 @media (max-width: 640px) { .guided-playground { padding: 30px 16px; } .playground-intro { margin-bottom: 24px; } .playground-network > summary { padding: 16px; gap: 10px; } .playground-network-state { display: none; } }
+
+/* Keep the learning entry point within the same workspace rhythm. */
+.playground-quest { display: flex; align-items: center; gap: 16px; max-width: 920px; margin: 0 auto 24px; padding: 16px 20px; border: 1px solid var(--mono-333333); border-radius: 12px; background: var(--mono-111111); color: var(--mono-f5f5f5); text-decoration: none; }
+.playground-quest:hover { border-color: var(--lab-accent); background: var(--mono-191919); }
+.playground-quest:focus-visible { outline: 2px solid var(--lab-accent); outline-offset: 4px; }
+.playground-quest-icon { flex-shrink: 0; font-size: 28px; color: var(--lab-accent); }
+.playground-quest strong { display: block; font-size: 14px; font-weight: 600; line-height: 1.5; }
+.playground-quest small { display: block; margin-top: 3px; font-size: 12px; color: var(--mono-949494); line-height: 1.5; }
+.playground-quest-action { margin-left: auto; flex-shrink: 0; font-size: 12px; font-weight: 600; color: var(--lab-accent); }
+.playground-network > summary > div { min-width: 0; }
+.playground-network[open] > summary { background: var(--mono-111111); }
+.playground-network .scan { min-width: 0; }
+.playground-network .scan-search-area { padding: 24px; text-align: left; }
+.playground-network .scan-search-area h1 { font-size: 24px; letter-spacing: -.03em; }
+.playground-network .scan-search-area label { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 20px; font-size: 13px; }
+.playground-network .scan-search-area select { min-width: 0; max-width: 100%; padding: 8px 12px; border: 1px solid var(--mono-333333); border-radius: 7px; background: var(--mono-111111); color: var(--mono-f5f5f5); }
+.playground-network .scan-content { padding: 0 24px 24px; }
+.playground-network input { min-width: 0; }
+.playground-network a { overflow-wrap: anywhere; }
+.studio-nav nav .studio-quest-link { color: var(--mono-eeeeee); border: 1px solid var(--mono-333333); margin-top: 8px; }
+.studio-nav nav .studio-quest-link:focus-visible { outline: 2px solid var(--mono-949494); outline-offset: 3px; }
+@media (max-width: 640px) {
+  .playground-quest { gap: 12px; padding: 14px; flex-wrap: wrap; }
+  .playground-quest > span:nth-child(2) { flex: 1; min-width: 180px; }
+  .playground-quest-action { padding-left: 40px; margin-left: 0; }
+  .playground-network .scan-search-area { padding: 20px 16px; }
+  .playground-network .scan-content { padding: 0 16px 20px; }
+}

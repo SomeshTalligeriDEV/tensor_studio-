@@ -3,6 +3,7 @@ import { useEffect, useState, type ReactNode } from 'react';
 import { toggleTheme } from '~/lib/stores/theme';
 import { RunnerStatus } from './RunnerStatus';
 import { ModelSettings } from './ModelSettings';
+import { BITTENSOR_QUEST_URL } from '../landing/links';
 
 const routes = [
   ['/', 'Overview', 'i-ph:squares-four'],
@@ -35,7 +36,7 @@ export function StudioShell({ children }: { children: ReactNode }) {
   const home = location.pathname === '/';
   const [panel, setPanel] = useState<'docs' | 'settings' | null>(null);
   const [menuOpen, setMenuOpen] = useState(false);
-  const title = location.pathname === '/harness' ? 'Evaluation report' : location.pathname.startsWith('/dashboard') ? 'Subnet dashboard' : location.pathname.startsWith('/scan') ? 'TensorScan' : routes.find(([path]) => path === location.pathname)?.[1] || 'Subnet builder';
+  const title = location.pathname === '/owner' ? 'Owner workspace' : location.pathname === '/harness' ? 'Evaluation report' : location.pathname.startsWith('/dashboard') ? 'Subnet dashboard' : location.pathname.startsWith('/scan') ? 'TensorScan' : routes.find(([path]) => path === location.pathname)?.[1] || 'Subnet builder';
   useEffect(() => {
     setMenuOpen(false);
     setPanel(null);
@@ -75,6 +76,10 @@ export function StudioShell({ children }: { children: ReactNode }) {
               {label}
             </NavLink>
           ))}
+          <a href={BITTENSOR_QUEST_URL} target="_blank" rel="noopener noreferrer" className="studio-quest-link">
+            <span className="i-ph:game-controller" aria-hidden="true" />
+            Bittensor Quest <span className="studio-arrow" aria-hidden="true">↗</span>
+          </a>
         </nav>
         <div className="studio-nav-bottom">
           <div className="studio-local">

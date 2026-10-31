@@ -6,7 +6,7 @@
 - Standalone explorer: https://tensorscan.vercel.app/scan?network=test
 - Backend: https://tensorstudio-runner.onrender.com
 
-The landing page and read-only explorer are public. Operational workbench routes require owner credentials. Contact the workspace owner for access; do not put credentials in issues, README files or screenshots.
+Workbench pages, model choices and bounded AI actions are public without native authentication dialogs. Private runner sessions and execution require owner access through `/owner`, using a secure HttpOnly cookie. Public AI requests have best-effort per-instance demo limits. Contact the workspace owner for access; do not put credentials in issues, README files or screenshots.
 
 ## Runtime configuration
 

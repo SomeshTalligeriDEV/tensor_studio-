@@ -9,6 +9,8 @@ import { useEffect } from 'react';
 
 import reactToastifyStyles from 'react-toastify/dist/ReactToastify.css?url';
 import globalStyles from './styles/index.scss?url';
+import playgroundStyles from './components/playground/playground.css?url';
+import ideaComposerStyles from './components/studio/idea-composer.css?url';
 import xtermStyles from '@xterm/xterm/css/xterm.css?url';
 
 import 'virtual:uno.css';
@@ -26,6 +28,8 @@ export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: tailwindReset },
   { rel: 'stylesheet', href: globalStyles },
   { rel: 'stylesheet', href: xtermStyles },
+  { rel: 'stylesheet', href: playgroundStyles },
+  { rel: 'stylesheet', href: ideaComposerStyles },
   {
     rel: 'preconnect',
     href: 'https://fonts.googleapis.com',

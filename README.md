@@ -109,7 +109,7 @@ Read the [Bittensor integration guide](docs/BITTENSOR-INTEGRATION.md) and [offic
 
 | Tool | What you use it for | Availability |
 | --- | --- | --- |
-| **[TensorStudio](https://tensorstudio-workbench.vercel.app)** | Shape an idea, build an interface, assemble a task project and inspect its evaluation | Hosted workspace; execution requires owner sign-in |
+| **[TensorStudio](https://tensorstudio-workbench.vercel.app)** | Shape an idea, build an interface, assemble a task project and inspect its evaluation | Public workspace; private execution requires owner access |
 | **[TensorScan](https://tensorscan.vercel.app/scan?network=test)** | Explore public testnet blocks, events, addresses and subnet data | Public read-only explorer |
 | **[Bittensor Quest](https://bittensor-quest-learn.someshtalligeri12.chatgpt.site/#game)** | Learn Bittensor through a game-oriented experience | Public learning site; progress stays in your browser |
 | **[TensorNode](https://github.com/SomeshTalligeriDEV/tensornode)** | Review operator jobs, events and billing information | Separate private repository; demonstrated with zero-spend drafts |
@@ -148,7 +148,7 @@ Hosted runner access uses short-lived scoped sessions and TLS. The owner console
 
 ### Open the hosted workspace
 
-Visit **[tensorstudio-workbench.vercel.app](https://tensorstudio-workbench.vercel.app)**. The landing page and read-only explorer are public; execution tools require the workspace owner's sign-in. Never publish those credentials.
+Visit **[tensorstudio-workbench.vercel.app](https://tensorstudio-workbench.vercel.app)**. The playground, builder, wallet interface and read-only explorer open publicly without a browser sign-in popup. Public AI requests have demo limits. Private runner operations require explicit owner access at `/owner`; keep those credentials private.
 
 ### Run locally
 

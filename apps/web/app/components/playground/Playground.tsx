@@ -3,7 +3,7 @@ import { Link } from '@remix-run/react';
 import { decodeAddress } from '@polkadot/util-crypto';
 import { useChain } from '~/components/studio/ChainProvider';
 import { IdeaComposer } from '~/components/studio/IdeaComposer';
-import './playground.css';
+import { BITTENSOR_QUEST_URL } from '../landing/links';
 import { ExtensionWallet } from '~/components/wallet/ExtensionWallet';
 import { runnerFetch } from '~/lib/runner/client';
 import '~/components/explorer/explorer.css';
@@ -37,6 +37,11 @@ export function Playground() {
   }
   return <div className="guided-playground">
     <section className="playground-intro"><div className="playground-symbol" aria-hidden="true"><span className="i-ph:flask" /></div><p className="playground-kicker">The idea lab</p><h1>A little curiosity.<br />Something worth building.</h1><p>Explore an idea, find your next step, and bring it to life on Bittensor.</p></section>
+    <a className="playground-quest" href={BITTENSOR_QUEST_URL} target="_blank" rel="noopener noreferrer">
+      <span className="playground-quest-icon i-ph:game-controller" aria-hidden="true" />
+      <span><strong>Learn by playing Bittensor Quest</strong><small>Explore Bittensor through an interactive game.</small></span>
+      <span className="playground-quest-action">Play Quest <span aria-hidden="true">↗</span></span>
+    </a>
     <IdeaComposer />
     <details className="playground-network"><summary><span className="i-ph:plugs-connected" aria-hidden="true" /><div><strong>Network tools</strong><small>Connect a wallet, get test TAO, explore transactions</small></div><span className="playground-network-state">{state.network} · {state.status}</span><span aria-hidden="true">⌄</span></summary><div className="scan">
     <header className="scan-search-area"><h1>Your network sandbox.</h1><p>Connect a wallet, get development TAO, and follow your first transaction.</p>

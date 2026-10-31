@@ -1,4 +1,3 @@
-import './idea-composer.css';
 import { useEffect, useRef, useState } from 'react';
 import { useLocation, useNavigate } from '@remix-run/react';
 import { useStore } from '@nanostores/react';

@@ -6,6 +6,7 @@ async function runnerConnection(): Promise<RunnerConnection> {
   session ??= fetch('/api/runner-connection', {
     headers: { 'X-Bitcode-Client': 'studio' }, credentials: 'same-origin', cache: 'no-store', signal: AbortSignal.timeout(5000),
   }).then(async response => {
+    if (response.status === 403) throw new Error('This operation needs owner execution access. Open /owner to connect the private runner.');
     if (!response.ok) throw new Error('Runner authentication is unavailable. Check runner connection configuration.');
     const value: unknown = await response.json();
     if (!value || typeof value !== 'object') throw new Error('Invalid runner connection.');
