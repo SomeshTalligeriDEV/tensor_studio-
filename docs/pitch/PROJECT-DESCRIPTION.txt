@@ -1,0 +1,72 @@
+TensorStudio — Learn the network. Build the experiment. Inspect the evidence.
+
+Bittensor makes specialized intelligence possible. TensorStudio makes it easier to start building it.
+
+A promising idea is only the beginning. Building for Bittensor means understanding the network, identifying useful work, deciding how quality should be measured, implementing a service and investigating what actually happened. Today, that journey can send a newcomer between documentation, editors, terminals, evaluation scripts and explorers before they have a meaningful first experiment.
+
+TensorStudio brings that development loop into one browser workspace, supported by complementary learning, exploration and compute-operations projects. The goal is to help people move from curiosity to an inspectable prototype, with the task, code, evaluation and results kept understandable.
+
+TensorStudio: turn an idea into an experiment
+
+Our demonstration follows a concrete problem: routing customer-support messages into billing or technical. The builder follows six steps:
+
+1. Clarify the problem. Use the guided playground to discuss intended users, define a useful task and identify practical next steps.
+2. Build an interface. Generate editable application code, inspect project files and interact with a working browser preview. The demonstrated support inbox includes manual review controls.
+3. Define quality. Supply labelled examples and inspect a structured question-answering or classification recipe, including reference answers, scoring choices and response constraints.
+4. Challenge the evaluation. Assemble reviewed project templates and inspect how an offline harness treats correct, incorrect, late and empty fixture responses. This makes evaluation assumptions visible before they become operational decisions.
+5. Run and investigate. Manage generated miner and development-validator processes, inspect logs and execute authenticated console commands. The recorded demonstration includes a signed development request to a generated miner that returns an actual model classification.
+6. Observe the network. Use TensorScan and subnet views to investigate independent chain observations alongside development results.
+
+TensorScan: make network activity understandable
+
+Process logs explain what your software did. TensorScan helps explain what the network recorded.
+
+Available inside Studio and as a standalone read-only application, TensorScan lets builders follow blocks, inspect decoded calls and events, investigate public addresses, and explore subnet participants and available metrics. Network selection and connection information give those observations context. Recent browser-indexed activity and historical state remain dependent on RPC availability and retention.
+
+Its role is practical: help a builder investigate network behavior without confusing an application response with a chain transaction, or a running miner with registered participation. It turns chain visibility into part of the development workflow rather than a separate investigation after something goes wrong.
+
+Bittensor Quest: make the first step approachable
+
+Before someone can build confidently, they need a way to understand what they are building.
+
+Bittensor Quest introduces the ecosystem through an explorable pixel adventure, interactive lessons, quizzes and local coding exercises. Learners encounter TAO, subnet markets, miners, validators and consensus through activities rather than vocabulary alone. Browser-local progress and XP give them a visible learning path.
+
+The recorded journey completes a quiz and four local code tests, showing how a newcomer can move from learning a concept to practising it. Quest is a separate learning application; its exercises are local simulations, and learning XP is not a token reward.
+
+TensorNode: bring operational questions into view
+
+A prototype also raises an operational question: what resources will it need, and what record will exist of the work?
+
+TensorNode is a separate compute-operations companion project for exploring that side of the journey. Its demonstrated workflow creates a zero-spend deployment draft, reads back persisted state, inspects recorded events and billing information, and cancels the unallocated draft. This gives an operator a concrete way to examine intent, state transitions and records before committing resources.
+
+Its first provider target is Lium SN51. The demonstrated draft workflow does not establish successful paid GPU allocation or execution. TensorNode is presented as a separate project, with its source and integration boundaries documented clearly.
+
+Why Bittensor — and why this workspace
+
+Bittensor organizes specialized work around task-specific subnets, miners, validators and network incentives. That makes the quality of the task and its evaluation central to building a useful service. TensorStudio gives those questions a practical home beside the code, tests, process output and network explorer.
+
+The architecture combines a React/Remix workbench, browser execution previews, an authenticated FastAPI runner, signed miner communication and independent Subtensor RPC observations. Credentials remain server-side, while process execution and console tools require protected owner access.
+
+Offline fixture evaluation, actual model inference and on-chain participation are explicitly distinguished. The assistant uses a configurable inference endpoint; the project does not claim that a registered TensorStudio subnet powers the hosted assistant. Subnet Factory is a separately referenced generation prototype, not a live backend integration.
+
+The contribution
+
+For newcomers, the journey starts with learning. For developers and researchers, it continues through editable code and explicit evaluation. For subnet teams and operators, it adds process visibility, network observations and a separate compute-planning workflow.
+
+A proposed business path includes team workspaces, isolated managed runners, private evaluation and operational observability. These are future commercial options, not claims of existing revenue or customers.
+
+TensorStudio helps more people move from understanding Bittensor to building something they can question, test and improve. The central question stays visible throughout: what useful work should this network perform—and how will we know it performs that work well?
+
+---
+
+Explore the project
+
+- Live workspace: https://tensorstudio-workbench.vercel.app
+- Public six-slide pitch deck: https://tensorstudio-pitch-deck.vercel.app
+- Pitch deck PDF: https://tensorstudio-pitch-deck.vercel.app/TensorStudio-Pitch-Deck.pdf
+- Five-minute developer journey: https://youtu.be/Ap9ZqK-umcA
+- TensorScan: https://tensorscan.vercel.app/scan?network=test
+- Bittensor Quest: https://bittensor-quest-learn.someshtalligeri12.chatgpt.site/#game
+- TensorStudio source: https://github.com/SomeshTalligeriDEV/tensor_studio- — private; reviewer access required.
+- TensorNode source: https://github.com/SomeshTalligeriDEV/tensornode — separate private repository.
+- Subnet Factory reference: https://github.com/aditya-541/sub — separate public prototype.
