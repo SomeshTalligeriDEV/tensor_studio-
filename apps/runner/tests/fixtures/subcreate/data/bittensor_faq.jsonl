@@ -1,0 +1,40 @@
+{"input": "What is Bittensor?", "answer": "A decentralized network for machine intelligence."}
+{"input": "What is the native token of Bittensor?", "answer": "TAO"}
+{"input": "What is the smallest unit of TAO?", "answer": "rao"}
+{"input": "How many rao are in one TAO?", "answer": "1000000000"}
+{"input": "What is a subnet?", "answer": "A network of miners and validators for a specific task."}
+{"input": "What does a miner do?", "answer": "Produces responses for a subnet task."}
+{"input": "What does a validator do?", "answer": "Evaluates miner responses and assigns weights."}
+{"input": "What is a coldkey?", "answer": "A key used to manage funds and ownership."}
+{"input": "What is a hotkey?", "answer": "A key used for operational signing by miners and validators."}
+{"input": "What is a netuid?", "answer": "The identifier of a subnet."}
+{"input": "What is a UID?", "answer": "A neuron identifier within a subnet."}
+{"input": "What is a metagraph?", "answer": "A snapshot of subnet neurons and their on-chain state."}
+{"input": "What is a miner endpoint?", "answer": "The network address where validators send requests."}
+{"input": "What does serve_axon do?", "answer": "Publishes a neuron endpoint on chain."}
+{"input": "Does serve_axon start an HTTP server?", "answer": "No"}
+{"input": "What is localnet?", "answer": "A local development blockchain."}
+{"input": "Does local test TAO have monetary value?", "answer": "No"}
+{"input": "What is an extrinsic?", "answer": "An operation submitted to the blockchain."}
+{"input": "What is a transaction fee?", "answer": "A charge for processing a chain transaction."}
+{"input": "What does a dry run do?", "answer": "Previews an operation without submitting it."}
+{"input": "What does a Policy do?", "answer": "Restricts operations according to configured limits."}
+{"input": "What does transferKeepAlive preserve?", "answer": "The sender account existential deposit."}
+{"input": "What is an SS58 address?", "answer": "A checksummed encoding of a Substrate account identifier."}
+{"input": "What signing scheme does the demo wallet use?", "answer": "sr25519"}
+{"input": "Where should recovery words be kept?", "answer": "In a secure private backup."}
+{"input": "Should a miner receive a user coldkey?", "answer": "No"}
+{"input": "What does btauth prove?", "answer": "The identity of the signer and integrity of the signed request."}
+{"input": "Why bind a request to its receiver?", "answer": "To prevent forwarding the signature to a different miner."}
+{"input": "What does a nonce help prevent?", "answer": "Replay attacks."}
+{"input": "What bytes should request authentication verify?", "answer": "The exact raw received body bytes."}
+{"input": "What is a weight?", "answer": "A relative score assigned by a validator to a miner."}
+{"input": "What does weight normalization do?", "answer": "Converts scores into relative weights."}
+{"input": "What is EMA?", "answer": "An exponential moving average."}
+{"input": "Why use a timeout?", "answer": "To bound how long a validator waits for a response."}
+{"input": "What score does a timed-out answer receive in this demo?", "answer": "Zero"}
+{"input": "What is ground truth?", "answer": "The expected answer used to evaluate a response."}
+{"input": "What is classification?", "answer": "Assigning an input to a label."}
+{"input": "What is a dataset?", "answer": "A collection of examples and labels or answers."}
+{"input": "Does signature verification prove an answer is correct?", "answer": "No"}
+{"input": "Does an identical answer prove plagiarism?", "answer": "No"}
