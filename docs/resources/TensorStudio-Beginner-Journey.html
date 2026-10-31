@@ -1,0 +1,48 @@
+<!doctype html><html><head><meta charset="utf-8"><title>TensorStudio — Beginner Developer Journey</title><style>@page{size:A4;margin:18mm 16mm 20mm}*{box-sizing:border-box}body{font:12px/1.55 Arial;color:#173039;margin:0}h1{font-size:31px;line-height:1.12;letter-spacing:-.8px}h2{font-size:20px;color:#18473b;break-after:avoid;margin-top:26px}p{margin:10px 0}a{color:#256d62}table{width:100%;border-collapse:collapse;font-size:10px}th,td{border-bottom:1px solid #d5e0d8;padding:8px;text-align:left;vertical-align:top}thead{display:table-header-group}tr,li,blockquote{break-inside:avoid}li{margin:6px 0}blockquote{border-left:3px solid #82ac82;background:#f0f5ef;padding:12px 20px;margin:15px 0}pre{background:#eef4f0;padding:13px;border-radius:8px;white-space:pre-wrap;font-size:10px}code{font-size:11px}img{max-width:100%;border-radius:12px}.banner{width:100%;height:150px;object-fit:cover;object-position:50% 43%}</style></head><body><img class=banner src="../media/banner.svg" alt="TensorStudio — One idea. Every next step."><h1>Your first TensorStudio journey</h1>
+<p>You do not need to understand every Bittensor term before beginning. Start with one small question: <strong>can we route a support message to the right team?</strong></p>
+<p><a href="../media/TensorStudio-developer-journey-5min.mp4">Watch the five-minute walkthrough</a> · <a href="https://tensorstudio-workbench.vercel.app">Open TensorStudio</a></p>
+<table><thead><tr><th>Video time</th><th>Step</th><th>What it means</th></tr></thead><tbody><tr><td>00:00–00:50</td><td>Understand the problem</td><td>A service needs a task, software, evaluation and visibility</td></tr><tr><td>00:50–01:30</td><td>Play Bittensor Quest</td><td>Learn the words, check an answer and try a local coding exercise</td></tr><tr><td>01:30–02:05</td><td>Build a small interface</td><td>Ask for a plan and inspect a working support-inbox prototype</td></tr><tr><td>02:05–02:45</td><td>Define and test the task</td><td>Supply labelled examples, assemble files and inspect scoring</td></tr><tr><td>02:45–03:15</td><td>Run and inspect</td><td>Read miner logs, stop/start a process and run a console command</td></tr><tr><td>03:15–03:40</td><td>Read the network</td><td>Explore testnet events, a subnet dashboard and wallet tools</td></tr><tr><td>03:40–04:25</td><td>Meet TensorNode</td><td>Watch its existing zero-spend draft, events, billing and cancellation workflow</td></tr><tr><td>04:25–04:45</td><td>Find the source</td><td>Understand which project owns each part</td></tr><tr><td>04:45–05:00</td><td>Take the next step</td><td>Choose learning, development or operations</td></tr></tbody></table>
+<h2>1. Learn the vocabulary through play</h2>
+<p>Open <a href="https://bittensor-quest-learn.someshtalligeri12.chatgpt.site/#game">Bittensor Quest</a>, select <strong>Start Exploring</strong>, and use arrows/WASD to move. The Learning panel offers six short lessons. For the first one:</p>
+<ol>
+<li>Choose <strong>TAO Fundamentals</strong> and read the explanation.</li>
+<li>Select your answer and press <strong>Check Answer</strong>.</li>
+<li>Select <strong>Start Code Challenge</strong> and read the classroom task.</li>
+<li>Complete <code>solution(input)</code> and choose <strong>Run Local Tests</strong>.</li>
+<li>Open <strong>Progress</strong> to see the lesson&#x27;s learning XP.</li>
+</ol>
+<p>Quiz XP is a learning score, not real money or TAO. Code exercises are simplified simulations, not actual staking, transfers or consensus. Lessons and local tests work independently of the optional AI tutor.</p>
+<h2>2. Put a problem into words</h2>
+<p>Open Studio&#x27;s <strong>Playground</strong> and explain the user, task and desired result. For example:</p>
+<blockquote>
+<p>Help a customer-support team route messages into billing or technical. What labelled data and scoring rule would make this checkable?</p>
+</blockquote>
+<p>Review the response. Ask follow-up questions before accepting its assumptions. An app suggestion opens the interface builder; a subnet suggestion goes to subnet setup.</p>
+<h2>3. Build the interface around the service</h2>
+<p>Open <strong>Subnet builder</strong> and request a small support-inbox interface. Inspect the code and use its actual preview. In this film, the review buttons are human controls; they are not presented as live model predictions. A useful interface and a working miner model are separate pieces of the application.</p>
+<h2>4. Explain what a correct answer looks like</h2>
+<p>In <strong>Subnet setup</strong>, describe the task and paste reviewed JSONL examples. Each line has <code>input</code> and <code>answer</code>. For example format only:</p>
+<pre><code class="language-jsonl">{&quot;input&quot;:&quot;Please refund my invoice&quot;,&quot;answer&quot;:&quot;billing&quot;}
+{&quot;input&quot;:&quot;The page crashes after login&quot;,&quot;answer&quot;:&quot;technical&quot;}
+</code></pre>
+<p>Generate a recipe and inspect the task, scoring and weight blocks. Choose <strong>Assemble project and check code</strong>. The files provide a concrete starting project; this action does not register a subnet.</p>
+<h2>5. Inspect the scoring</h2>
+<p>Choose <strong>Run offline harness</strong>, then <strong>Open saved report</strong>. Compare the controlled correct, incorrect, late and empty answers. Classification labels may match without implying plagiarism. Fixture scores are real calculations, while timing is simulated. They do not prove how an unseen model will perform.</p>
+<h2>6. Run with the right access</h2>
+<p>The hosted execution tools require the workspace owner&#x27;s sign-in. A miner requires configured inference and valid public identity values. Open <strong>Nodes</strong>, inspect the actual process output, and use stop/start controls. Console commands stream real output from the connected runner.</p>
+<p>The film also runs a <a href="local-miner-probe.py">development-only signed miner probe</a>. It sends a new message to the generated miner and prints its actual model response. This optional helper is supplied separately from the generated templates and uses the public Alice development identity; it must not be used for valuable funds or as production authentication.</p>
+<p>The hosted free runner can sleep and reset files; reassembly/relaunch may be needed afterward. Process startup is distinct from chain registration, serving and rewards.</p>
+<h2>7. Observe independently</h2>
+<p>Open <strong>TensorScan</strong>, choose the intended network and inspect blocks/events. Open a subnet dashboard to see observed participants. The example testnet subnet is public network state, not a claim that the demo owns it. Wallet tools are available separately; never record or share recovery material.</p>
+<h2>8. Review compute operations in TensorNode</h2>
+<p>Open the separate <a href="https://github.com/SomeshTalligeriDEV/tensornode">TensorNode repository</a> and its <a href="https://github.com/SomeshTalligeriDEV/tensornode/blob/main/media/application-demo/TensorNode-professional-working-demo.mp4">full working demo</a>. The combined film uses that real recording:</p>
+<ol>
+<li>Save a zero-spend draft describing intended work.</li>
+<li>Retrieve the persisted record.</li>
+<li>Read stored events and follow event updates.</li>
+<li>Inspect billing separately from deployment intent.</li>
+<li>Cancel the unallocated draft and verify its saved state.</li>
+</ol>
+<p>The first provider target is Lium SN51. This recorded workflow does not show a paid GPU allocation or successful GPU execution. TensorNode has its own Rust/Next.js/PostgreSQL setup; it is not an already integrated Studio service.</p>
+<h2>9. Find the implementation</h2>
+<p>The <a href="ECOSYSTEM.md">ecosystem guide</a> links Studio, TensorNode and Subnet Factory source. Factory is a separate miner-contribution generation prototype; the current evidence does not establish a registered public Factory subnet serving Studio&#x27;s assistant. Private repositories require access from their owners.</p></body></html>

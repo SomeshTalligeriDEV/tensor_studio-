@@ -31,6 +31,10 @@ The implementation pins Bittensor 11.3.0. Check current upstream documentation b
 
 ## Learning and design references
 
+- [TensorNode source and working demo](https://github.com/SomeshTalligeriDEV/tensornode) — separate compute-operations project.
+- [Subnet Factory implementation](https://github.com/aditya-541/sub) — separate generation prototype.
+- [Ecosystem guide](ECOSYSTEM.md) — ownership, source links and integration boundaries.
+
 - [Bittensor Quest](https://bittensor-quest-learn.someshtalligeri12.chatgpt.site) — gamified introduction; separate application and sign-in.
 - [TensorScan](https://tensorscan.vercel.app/scan?network=test) — standalone explorer deployment.
 - [React Bits](https://reactbits.dev/) — animated components; bundled license in `apps/web/third-party`.
@@ -40,6 +44,9 @@ The implementation pins Bittensor 11.3.0. Check current upstream documentation b
 Planes Pro components are not included. TensorStudio uses an original free visual treatment. Keep bundled third-party license files with redistributed source.
 
 ## Downloadable TensorStudio guides
+
+- [Beginner developer journey](TensorStudio-Beginner-Journey.pdf) — plain-language walkthrough with Quest and TensorNode.
+- [Ecosystem and source repositories](ECOSYSTEM.md) — exact implementation links and integration boundaries.
 
 - [Project brief](TensorStudio-Project-Brief.pdf)
 - [Architecture and operations](TensorStudio-Architecture-Guide.pdf)

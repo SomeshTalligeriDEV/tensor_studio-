@@ -2,16 +2,20 @@
 
 <img src="docs/media/banner.svg" alt="TensorStudio — One idea. Every next step." width="100%" />
 
-**The browser workspace for building on Bittensor.**
+**Turn an AI idea into a project you can inspect, test and run.**
+
+A guided browser workspace for people exploring and building on Bittensor.
 
 [![Bittensor](https://img.shields.io/badge/Built_for-Bittensor-102329?style=for-the-badge)](https://www.bittensor.com/)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Python](https://img.shields.io/badge/Python_3.11-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![React](https://img.shields.io/badge/React-102329?style=for-the-badge&logo=react)
 
-[Open TensorStudio](https://tensorstudio-workbench.vercel.app) · [Watch the demo](docs/media/TensorStudio-demo-5min.mp4) · [Three-minute pitch](docs/pitch/README.md) · [Project brief PDF](docs/resources/TensorStudio-Project-Brief.pdf)
+[Open TensorStudio](https://tensorstudio-workbench.vercel.app) · [Watch the five-minute journey](docs/media/TensorStudio-developer-journey-5min.mp4) · [Three-minute pitch](docs/pitch/README.md) · [Project brief PDF](docs/resources/TensorStudio-Project-Brief.pdf)
 
 </div>
+
+[![Watch the TensorStudio developer journey](docs/media/developer-journey-poster.png)](docs/media/TensorStudio-developer-journey-5min.mp4)
 
 ## From a useful idea to an inspectable system
 
@@ -19,7 +23,29 @@ A Bittensor subnet needs more than a model. It needs a useful task, a way to eva
 
 Those pieces often live in different editors, terminals, scripts and explorers. TensorStudio brings the development loop into one workspace: **describe a problem, build an interface, assemble a task-specific project, test its scoring, run processes and inspect the chain.**
 
-For subnet founders, developers, researchers and teams learning to build on decentralized intelligence.
+You can start with a plain-language idea. Running your own services requires configuration and technical experience; the public explorer and learning path offer a starting point before that step.
+
+| Who it helps | A useful first outcome |
+| --- | --- |
+| Curious newcomers | Learn the roles, explore a live network and see how a project fits together |
+| Founders and product teams | Turn a problem into a concrete interface and a measurable task |
+| Researchers | Inspect how labelled examples and scoring rules affect an evaluation |
+| Developers and operators | Review generated code, run processes and inspect logs and chain observations |
+
+<details>
+<summary><strong>New to the terms? A 30-second glossary</strong></summary>
+
+| Word | Plain meaning |
+| --- | --- |
+| Subnet | A network focused on a particular job |
+| Miner | A participant or service doing that work |
+| Validator | A participant evaluating results |
+| Inference | Asking a model to produce an answer |
+| Ground truth | Reviewed reference answers used for evaluation |
+| Runner | The service that executes your project and streams output |
+| Netuid | The identifying number of a Bittensor subnet |
+
+</details>
 
 ## The problem we solve
 
@@ -38,7 +64,7 @@ For subnet founders, developers, researchers and teams learning to build on dece
 
 Use the playground to shape an idea, review a plan and carry context into the **Subnet builder**. Inspect generated files and try the result in a real browser preview.
 
-![Editable code and an interactive task-tracker preview](docs/media/builder.png)
+![Editable code and an interactive support-inbox prototype](docs/media/builder.png)
 
 ### Define → Evaluate
 
@@ -52,7 +78,11 @@ Manage generated miner and development-validator processes through Nodes. Inspec
 
 ## Why Bittensor
 
-Bittensor provides the network context for specialized intelligence: miners perform work, validators evaluate it, and subnet incentive mechanisms connect contributions to network economics. TensorStudio focuses on the builder workflow around those roles.
+Bittensor lets independent teams organize specialized AI services around shared evaluation and incentives. A **subnet** is a network focused on a particular task. **Miners** provide answers or services; **validators** check their quality. The network can reward contributions according to its rules.
+
+That makes a useful question central to building: *what work should this service do, and how will we recognize a good result?* TensorStudio brings that question into the same workspace as the interface, code, evaluation and network explorer. It helps teams investigate an idea before making claims about real-world quality or network earnings.
+
+![Why Bittensor: task, miners, validators and network coordination](docs/media/why-bittensor.svg)
 
 | Bittensor concept | How TensorStudio uses it |
 | --- | --- |
@@ -66,6 +96,35 @@ Bittensor provides the network context for specialized intelligence: miners perf
 **Inference and the chain are separate connections.** The assistant uses a configurable model endpoint. A compatible subnet inference service can be configured as that endpoint; this repository does not claim the hosted assistant is served by a registered TensorStudio subnet. Starting a miner process is separate from registration, on-chain serving, accepted weights and rewards.
 
 Read the [Bittensor integration guide](docs/BITTENSOR-INTEGRATION.md) and [official network concepts](https://www.bittensor.com/docs/concepts/network).
+
+## One ecosystem, distinct tools
+
+![TensorStudio ecosystem and the roles of TensorScan, Quest, TensorNode and Subnet Factory](docs/media/ecosystem.svg)
+
+| Tool | What you use it for | Availability |
+| --- | --- | --- |
+| **[TensorStudio](https://tensorstudio-workbench.vercel.app)** | Shape an idea, build an interface, assemble a task project and inspect its evaluation | Hosted workspace; execution requires owner sign-in |
+| **[TensorScan](https://tensorscan.vercel.app/scan?network=test)** | Explore public testnet blocks, events, addresses and subnet data | Public read-only explorer |
+| **[Bittensor Quest](https://bittensor-quest-learn.someshtalligeri12.chatgpt.site/#game)** | Learn Bittensor through a game-oriented experience | Public learning site; progress stays in your browser |
+| **[TensorNode](https://github.com/SomeshTalligeriDEV/tensornode)** | Review operator jobs, events and billing information | Separate private repository; demonstrated with zero-spend drafts |
+| **[Subnet Factory](https://github.com/aditya-541/sub)** | Develop a contribution-based project-generation backend | Separate public development project; proposed future integration |
+
+These tools have separate deployment and trust boundaries. TensorNode is not integrated into this Studio deployment, and Subnet Factory is not a deployed subnet powering the hosted assistant. See the [ecosystem guide](docs/resources/ECOSYSTEM.md) for source links, demonstrations and current limits.
+
+### Learn by playing; operate with a clear record
+
+[**Bittensor Quest**](https://bittensor-quest-learn.someshtalligeri12.chatgpt.site/#game) turns the vocabulary into lessons, quizzes and small code simulations. The combined film completes a quiz and four local code tests, then checks learning progress.
+
+[**TensorNode**](https://github.com/SomeshTalligeriDEV/tensornode) is the separate compute-operator project. Its [recorded working demo](https://github.com/SomeshTalligeriDEV/tensornode/blob/main/media/application-demo/TensorNode-professional-working-demo.mp4) creates a zero-spend draft, reads persisted events/billing and cancels the unallocated draft. Its first provider target is Lium SN51; paid GPU execution is not shown.
+
+<details>
+<summary>See the actual Quest and TensorNode interfaces</summary>
+
+![Bittensor Quest map and local coding exercise](docs/media/quest.png)
+
+![TensorNode compute planning interface from its existing recording](docs/media/tensornode.png)
+
+</details>
 
 ## System architecture
 
@@ -104,14 +163,21 @@ Use a model available from your chosen service. For private-chain work, configur
 
 ### Try the complete development loop
 
-1. Open **Playground** and describe a useful, measurable task.
-2. Carry a suggestion into **Subnet builder**; inspect code and interact with its preview.
-3. Open **Subnet setup**, describe a QA/classification task and supply labelled data.
-4. Generate a recipe, inspect its blocks and assemble the project.
-5. Run the offline harness and inspect the saved report.
-6. Launch a generated miner in **Nodes** with valid public identity values and configured inference.
-7. Inspect process logs and use **Console** for authorized runner commands.
-8. Use **TensorScan** and **Dashboard** to investigate the selected network.
+[Read the illustrated beginner journey](docs/resources/BEGINNER-JOURNEY.md) · [Download the guide PDF](docs/resources/TensorStudio-Beginner-Journey.pdf)
+
+| Step | What to do | What you should see |
+| --- | --- | --- |
+| **1 · Learn** | Open [Quest](https://bittensor-quest-learn.someshtalligeri12.chatgpt.site/#game) if Bittensor is new to you, then return to Studio. | Lessons, quizzes and local code simulations |
+| **2 · Describe** | Open **Playground**. Describe who needs help and a task with a checkable answer, such as sorting support requests. | A conversation and suggested next steps |
+| **3 · Build** | Open **Subnet builder** to prototype the interface; app suggestions also open it directly. Review the files and interact with the browser preview. | An editable starting project and interface |
+| **4 · Define** | Open **Subnet setup**. Describe a question-answering or classification task and supply labelled JSONL examples (one example per line). | A recipe showing the task, reference answers and scoring rules |
+| **5 · Assemble** | Review the recipe blocks, then assemble the project. | Generated files you can inspect |
+| **6 · Evaluate** | Run the offline harness: a local test of how the scoring treats example answers. Open its saved report. | Scores and proposed local weights (relative scores), including weak or empty answers |
+| **7 · Run** | With owner access and inference configured, open **Nodes** and launch a generated miner using valid public identity values. | A process status and logs; **Console** supports authorized runner commands |
+| **8 · Observe** | Open **TensorScan** and **Dashboard**, select the intended network and inspect its data. | Independent chain observations, separate from your process status |
+| **9 · Operate** | Open the separate [TensorNode project](https://github.com/SomeshTalligeriDEV/tensornode). Follow its setup guide or watch its working demo. | A compute-operations workflow for zero-spend drafts, events and billing; it needs its own runtime |
+
+Steps 3–7 need a configured workspace. A running local process does not establish network registration, accepted work or rewards.
 
 Example **format** for a small classification dataset; replace this illustrative data with reviewed data for your actual task:
 
@@ -144,12 +210,14 @@ A practical path is to offer self-hosted development tools, validate demand for 
 
 ## Documentation and resources
 
+- **[Beginner journey PDF](docs/resources/TensorStudio-Beginner-Journey.pdf)** — follow Quest, Studio, TensorScan and TensorNode step by step.
 - **[Project brief PDF](docs/resources/TensorStudio-Project-Brief.pdf)** — problem, product, Bittensor fit and business direction.
 - **[Architecture guide PDF](docs/resources/TensorStudio-Architecture-Guide.pdf)** — components, request flow, security boundaries and deployment.
 - **[Three-minute pitch](docs/pitch/README.md)** — narrated video, script and presenter timing.
 - **[Learning and technical resources](docs/resources/RESOURCES.md)** — official Bittensor references, SDKs and design acknowledgements.
 - **[Deployment guide](docs/DEPLOYMENT-RELEASE.md)** — hosting configuration and operational boundaries.
-- **[Bittensor Quest](https://bittensor-quest-learn.someshtalligeri12.chatgpt.site)** — gamified learning, with its own sign-in requirements.
+- **[Ecosystem guide](docs/resources/ECOSYSTEM.md)** — Studio, TensorScan, Quest, TensorNode and Subnet Factory source and status.
+- **[Bittensor Quest](https://bittensor-quest-learn.someshtalligeri12.chatgpt.site/#game)** — lessons, quizzes and code simulations, with browser-local progress.
 - **[Standalone TensorScan](https://tensorscan.vercel.app/scan?network=test)** — public testnet explorer.
 
 ## Development
@@ -169,6 +237,8 @@ scripts/        local setup, verification and packaging
 infra/          infrastructure configuration
 docs/           architecture, guides, pitch and resources
 ```
+
+Source: **[private Studio repository](https://github.com/SomeshTalligeriDEV/tensor_studio-)** · [Web application](https://github.com/SomeshTalligeriDEV/tensor_studio-/tree/main/apps/web) · [Runner and templates](https://github.com/SomeshTalligeriDEV/tensor_studio-/tree/main/apps/runner). Private repository links require access.
 
 ## Operating boundaries
 

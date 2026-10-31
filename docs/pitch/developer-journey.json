@@ -1,0 +1,56 @@
+[
+  {
+    "id": "00",
+    "title": "A useful idea needs a path",
+    "duration": 50,
+    "text": "You have an idea: help a business route support messages to the right team. But where do you begin? Bittensor has its own language, and building a useful service means connecting an interface, data, evaluation, running code and network tools. Those steps can feel like separate worlds. Think of a subnet as a team with a specific job. Miners provide results. Validators assess their quality. Bittensor coordinates participation and incentives around that work. TensorStudio gives the builder a practical starting point: learn the concepts, shape an idea, build an interface, test the scoring and inspect what runs. Let's follow that journey, one step at a time."
+  },
+  {
+    "id": "01",
+    "title": "Start by playing Bittensor Quest",
+    "duration": 40,
+    "text": "New to Bittensor? Start in Bittensor Quest. Enter the pixel world, move with the arrow keys, and open the learning panel. Choose TAO Fundamentals, read the short lesson, select an answer and check it. A correct response completes the lesson and adds learning experience. Next, open the code challenge. Write the small classroom function, run the local tests and inspect the results. Progress keeps your next lesson visible. These exercises teach the concepts without sending transactions; learning experience is not real TAO."
+  },
+  {
+    "id": "02",
+    "title": "Turn a question into a prototype",
+    "duration": 35,
+    "text": "Now open TensorStudio's Playground. Ask how to route support messages into billing or technical. Review the proposed task and next steps, then carry the idea forward. In Subnet builder, inspect the generated interface beside its code. Here we add a message about a duplicate charge and mark it for billing review. Another message describes a login failure. This is a working human review prototype around the service, keeping the interface separate from the model's actual inference."
+  },
+  {
+    "id": "03",
+    "title": "Define and test the task",
+    "duration": 40,
+    "text": "Next, open Subnet setup. Describe the classification task and supply labelled examples: a message paired with its expected category. Generate a recipe and inspect the choices for task, ground truth, scoring and weights. Assemble the project to create reviewable files and check the code. Then run the offline harness. Its report compares correct, incorrect, late and empty answers. Identical classification labels are not treated as proof of copying. The calculations are real; the timing values are simulated. You can see what the scoring rewards before evaluating a network."
+  },
+  {
+    "id": "04",
+    "title": "Run the code. Read the output.",
+    "duration": 30,
+    "text": "Open Nodes and inspect the miner started from our assembled project. Read its logs, stop it, and start it again. In the console, send a signed test message about a frozen login screen. The miner returns technical, and that real result streams back. This is a development request, not a chain transaction; registration and rewards remain separate."
+  },
+  {
+    "id": "05",
+    "title": "See what the network shows",
+    "duration": 25,
+    "text": "TensorScan connects the project to observable Bittensor activity. Follow decoded chain events, then open a subnet dashboard to inspect its registered participants. These are public testnet observations, not a claim that our development process owns that subnet. Wallet tools keep identity in the same workspace, while signing material stays encrypted in the browser."
+  },
+  {
+    "id": "06",
+    "title": "Plan compute with TensorNode",
+    "duration": 45,
+    "text": "Meet TensorNode, the separate compute workspace targeting Lium, subnet fifty one. First, create a draft with a zero spending limit. This records intended work without allocating a GPU. Refresh the workspace and find the new record, read back from the database. Open its stored event history, then follow the event stream. Read billing separately from deployment status: an unallocated draft has no rental charge. Finally, cancel that draft and refresh to verify its saved state. This existing application recording shows the real control workflow. Paid GPU execution is not demonstrated."
+  },
+  {
+    "id": "07",
+    "title": "Find each project's source",
+    "duration": 20,
+    "text": "The README maps the whole journey and links every project's code. Quest is the learning experience. Studio is the workbench. TensorScan is the explorer. TensorNode is the separate operator workspace. Subnet Factory is also linked as a separate generation prototype, with its integration and network status explained."
+  },
+  {
+    "id": "08",
+    "title": "Bring your next idea to life",
+    "duration": 15,
+    "text": "Start with curiosity, build something small, and inspect the evidence at each step. Open TensorStudio, follow the beginner's guide, and bring your next Bittensor idea to life. One idea. Every next step."
+  }
+]

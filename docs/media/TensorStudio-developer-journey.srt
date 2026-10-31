@@ -1,0 +1,251 @@
+1
+00:00:00,100 --> 00:00:05,815
+You have an idea: help a business route support messages to the right team.
+
+2
+00:00:05,915 --> 00:00:07,892
+But where do you begin?
+
+3
+00:00:07,992 --> 00:00:16,616
+Bittensor has its own language, and building a useful service means connecting an interface, data, evaluation, running code and network tools.
+
+4
+00:00:16,716 --> 00:00:19,523
+Those steps can feel like separate worlds.
+
+5
+00:00:19,623 --> 00:00:24,092
+Think of a subnet as a team with a specific job.
+
+6
+00:00:24,192 --> 00:00:25,339
+Miners provide results.
+
+7
+00:00:25,439 --> 00:00:27,000
+Validators assess their quality.
+
+8
+00:00:27,100 --> 00:00:30,323
+Bittensor coordinates participation and incentives around that work.
+
+9
+00:00:30,423 --> 00:00:40,293
+TensorStudio gives the builder a practical starting point: learn the concepts, shape an idea, build an interface, test the scoring and inspect what runs.
+
+10
+00:00:40,393 --> 00:00:44,031
+Let's follow that journey, one step at a time.
+
+11
+00:00:50,100 --> 00:00:51,286
+New to Bittensor?
+
+12
+00:00:51,386 --> 00:00:53,000
+Start in Bittensor Quest.
+
+13
+00:00:53,100 --> 00:00:58,999
+Enter the pixel world, move with the arrow keys, and open the learning panel.
+
+14
+00:00:59,099 --> 00:01:04,570
+Choose TAO Fundamentals, read the short lesson, select an answer and check it.
+
+15
+00:01:04,670 --> 00:01:08,855
+A correct response completes the lesson and adds learning experience.
+
+16
+00:01:08,955 --> 00:01:10,998
+Next, open the code challenge.
+
+17
+00:01:11,098 --> 00:01:16,568
+Write the small classroom function, run the local tests and inspect the results.
+
+18
+00:01:16,668 --> 00:01:19,140
+Progress keeps your next lesson visible.
+
+19
+00:01:19,240 --> 00:01:25,139
+These exercises teach the concepts without sending transactions; learning experience is not real TAO.
+
+20
+00:01:30,100 --> 00:01:31,614
+Now open TensorStudio's Playground.
+
+21
+00:01:31,714 --> 00:01:35,648
+Ask how to route support messages into billing or technical.
+
+22
+00:01:35,748 --> 00:01:40,489
+Review the proposed task and next steps, then carry the idea forward.
+
+23
+00:01:40,589 --> 00:01:44,523
+In Subnet builder, inspect the generated interface beside its code.
+
+24
+00:01:44,623 --> 00:01:50,574
+Here we add a message about a duplicate charge and mark it for billing review.
+
+25
+00:01:50,674 --> 00:01:52,995
+Another message describes a login failure.
+
+26
+00:01:53,095 --> 00:02:00,660
+This is a working human review prototype around the service, keeping the interface separate from the model's actual inference.
+
+27
+00:02:05,100 --> 00:02:06,766
+Next, open Subnet setup.
+
+28
+00:02:06,866 --> 00:02:13,389
+Describe the classification task and supply labelled examples: a message paired with its expected category.
+
+29
+00:02:13,489 --> 00:02:19,571
+Generate a recipe and inspect the choices for task, ground truth, scoring and weights.
+
+30
+00:02:19,671 --> 00:02:24,428
+Assemble the project to create reviewable files and check the code.
+
+31
+00:02:24,528 --> 00:02:26,635
+Then run the offline harness.
+
+32
+00:02:26,735 --> 00:02:30,609
+Its report compares correct, incorrect, late and empty answers.
+
+33
+00:02:30,709 --> 00:02:35,025
+Identical classification labels are not treated as proof of copying.
+
+34
+00:02:35,125 --> 00:02:38,998
+The calculations are real; the timing values are simulated.
+
+35
+00:02:39,098 --> 00:02:43,855
+You can see what the scoring rewards before evaluating a network.
+
+36
+00:02:45,100 --> 00:02:49,485
+Open Nodes and inspect the miner started from our assembled project.
+
+37
+00:02:49,585 --> 00:02:53,155
+Read its logs, stop it, and start it again.
+
+38
+00:02:53,255 --> 00:02:58,456
+In the console, send a signed test message about a frozen login screen.
+
+39
+00:02:58,556 --> 00:03:02,533
+The miner returns technical, and that real result streams back.
+
+40
+00:03:02,633 --> 00:03:08,242
+This is a development request, not a chain transaction; registration and rewards remain separate.
+
+41
+00:03:15,100 --> 00:03:18,623
+TensorScan connects the project to observable Bittensor activity.
+
+42
+00:03:18,723 --> 00:03:24,962
+Follow decoded chain events, then open a subnet dashboard to inspect its registered participants.
+
+43
+00:03:25,062 --> 00:03:31,755
+These are public testnet observations, not a claim that our development process owns that subnet.
+
+44
+00:03:31,855 --> 00:03:39,000
+Wallet tools keep identity in the same workspace, while signing material stays encrypted in the browser.
+
+45
+00:03:40,100 --> 00:03:44,884
+Meet TensorNode, the separate compute workspace targeting Lium, subnet fifty one.
+
+46
+00:03:44,984 --> 00:03:48,879
+First, create a draft with a zero spending limit.
+
+47
+00:03:48,979 --> 00:03:52,431
+This records intended work without allocating a GPU.
+
+48
+00:03:52,531 --> 00:03:58,202
+Refresh the workspace and find the new record, read back from the database.
+
+49
+00:03:58,302 --> 00:04:02,642
+Open its stored event history, then follow the event stream.
+
+50
+00:04:02,742 --> 00:04:08,413
+Read billing separately from deployment status: an unallocated draft has no rental charge.
+
+51
+00:04:08,513 --> 00:04:13,297
+Finally, cancel that draft and refresh to verify its saved state.
+
+52
+00:04:13,397 --> 00:04:17,292
+This existing application recording shows the real control workflow.
+
+53
+00:04:17,392 --> 00:04:19,956
+Paid GPU execution is not demonstrated.
+
+54
+00:04:25,100 --> 00:04:29,447
+The README maps the whole journey and links every project's code.
+
+55
+00:04:29,547 --> 00:04:31,468
+Quest is the learning experience.
+
+56
+00:04:31,568 --> 00:04:33,085
+Studio is the workbench.
+
+57
+00:04:33,185 --> 00:04:34,702
+TensorScan is the explorer.
+
+58
+00:04:34,802 --> 00:04:37,128
+TensorNode is the separate operator workspace.
+
+59
+00:04:37,228 --> 00:04:44,000
+Subnet Factory is also linked as a separate generation prototype, with its integration and network status explained.
+
+60
+00:04:45,100 --> 00:04:50,688
+Start with curiosity, build something small, and inspect the evidence at each step.
+
+61
+00:04:50,788 --> 00:04:56,812
+Open TensorStudio, follow the beginner's guide, and bring your next Bittensor idea to life.
+
+62
+00:04:56,912 --> 00:04:57,688
+One idea.
+
+63
+00:04:57,788 --> 00:04:59,000
+Every next step.
